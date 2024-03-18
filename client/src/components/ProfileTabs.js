@@ -10,8 +10,6 @@ const ProfileTabs = (props) => {
     <Card sx={{ padding: 0 }}>
       <Tabs value={props.tab} onChange={handleChange} variant="scrollable">
         <Tab label="Posts" value="posts" />
-        <Tab label="Liked" value="liked" />
-        <Tab label="Comments" value="comments" />
       </Tabs>
     </Card>
   );

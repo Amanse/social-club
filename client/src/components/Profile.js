@@ -39,25 +39,6 @@ const Profile = (props) => {
 
           <Typography variant="h5">{user.username}</Typography>
 
-          {props.editing ? (
-            <Box>
-              <ContentUpdateEditor
-                handleSubmit={props.handleSubmit}
-                originalContent={user.biography}
-                validate={props.validate}
-              />
-            </Box>
-          ) : user.biography ? (
-            <Typography textAlign="center" variant="p">
-              <b>Bio: </b>
-              {user.biography}
-            </Typography>
-          ) : (
-            <Typography variant="p">
-              <i>No bio yet</i>
-            </Typography>
-          )}
-
           {currentUser && user._id === currentUser.userId && (
             <Box>
               <Button
@@ -69,16 +50,7 @@ const Profile = (props) => {
             </Box>
           )}
 
-          {currentUser && user._id !== currentUser.userId && (
-            <Button variant="outlined" onClick={props.handleMessage}>
-              Message
-            </Button>
-          )}
-
           <HorizontalStack>
-            <Typography color="text.secondary">
-              Likes <b>{props.profile.posts.likeCount}</b>
-            </Typography>
             <Typography color="text.secondary">
               Posts <b>{props.profile.posts.count}</b>
             </Typography>

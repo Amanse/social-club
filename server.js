@@ -26,7 +26,7 @@ io.on("connection", (socket) => socketServer(socket));
 
 mongoose.connect(
   process.env.MONGO_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  { useNewUrlParser: true, useUnifiedTopology: true, dbName: "Social" },
   () => {
     console.log("MongoDB connected");
   }

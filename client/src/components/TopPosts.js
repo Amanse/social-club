@@ -35,24 +35,7 @@ const TopPosts = () => {
     fetchPosts();
   }, []);
 
-  return (
-    <Stack spacing={2}>
-      <Card>
-        <HorizontalStack>
-          <MdLeaderboard />
-          <Typography>Top Posts</Typography>
-        </HorizontalStack>
-      </Card>
-      {!loading ? (
-        posts &&
-        posts.map((post) => (
-          <PostCard preview="secondary" post={post} key={post._id} />
-        ))
-      ) : (
-        <Loading />
-      )}
-    </Stack>
-  );
+  return <div></div>;
 };
 
 export default TopPosts;

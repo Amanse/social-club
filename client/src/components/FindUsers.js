@@ -35,36 +35,7 @@ const FindUsers = () => {
     fetchUsers();
   };
 
-  return (
-    <Card>
-      <Stack spacing={2}>
-        <HorizontalStack justifyContent="space-between">
-          <HorizontalStack>
-            <AiOutlineUser />
-            <Typography>Find Others</Typography>
-          </HorizontalStack>
-          <IconButton
-            sx={{ padding: 0 }}
-            disabled={loading}
-            onClick={handleClick}
-          >
-            <MdRefresh />
-          </IconButton>
-        </HorizontalStack>
-
-        <Divider />
-
-        {loading ? (
-          <Loading />
-        ) : (
-          users &&
-          users.map((user) => (
-            <UserEntry username={user.username} key={user.username} />
-          ))
-        )}
-      </Stack>
-    </Card>
-  );
+  return <div></div>;
 };
 
 export default FindUsers;

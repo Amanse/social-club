@@ -77,22 +77,9 @@ const MobileProfile = (props) => {
                 </Typography>
               </>
             ) : (
-              <Typography variant="p">
-                <i>
-                  No bio yet{" "}
-                  {currentUser && user._id === currentUser.userId && (
-                    <span>- Tap on the edit icon to add your bio</span>
-                  )}
-                </i>
-              </Typography>
+              <Typography variant="p"></Typography>
             )}
-            {currentUser && user._id !== currentUser.userId && (
-              <Box sx={{ mt: 2 }}>
-                <Button variant="outlined" onClick={props.handleMessage}>
-                  Message
-                </Button>
-              </Box>
-            )}
+
             {props.editing && (
               <Box>
                 <ContentUpdateEditor

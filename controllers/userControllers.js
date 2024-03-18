@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Follow = require("../models/Follow");
 const { default: mongoose } = require("mongoose");
+const { connectToDB } = require("../util/db");
 
 const getUserDict = (token, user) => {
   return {
@@ -34,13 +35,13 @@ const register = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const existingUser = await User.findOne({
-      $or: [{ email: normalizedEmail }, { username }],
-    });
+    // const existingUser = await User.findOne({
+    //   $or: [{ email: normalizedEmail }, { username }],
+    // });
 
-    if (existingUser) {
-      throw new Error("Email and username must be unique");
-    }
+    // if (existingUser) {
+    //   throw new Error("Email and username must be unique");
+    // }
 
     const user = await User.create({
       username,

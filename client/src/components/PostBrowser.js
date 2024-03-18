@@ -150,18 +150,7 @@ const PostBrowser = (props) => {
 
         {loading && <Loading />}
         {end ? (
-          <Stack py={5} alignItems="center">
-            <Typography variant="h5" color="text.secondary" gutterBottom>
-              {posts.length > 0 ? (
-                <>All posts have been viewed</>
-              ) : (
-                <>No posts available</>
-              )}
-            </Typography>
-            <Button variant="text" size="small" onClick={handleBackToTop}>
-              Back to top
-            </Button>
-          </Stack>
+          <div></div>
         ) : (
           !loading &&
           posts &&

@@ -94,48 +94,7 @@ const Comments = () => {
     }
   };
 
-  return comments ? (
-    <Stack spacing={2}>
-      <CommentEditor
-        addComment={addComment}
-        label="What are your thoughts on this post?"
-      />
-
-      {comments.length > 0 ? (
-        <Box pb={4}>
-          {comments.map((comment, i) => (
-            <Comment
-              addComment={addComment}
-              removeComment={removeComment}
-              editComment={editComment}
-              comment={comment}
-              key={comment._id}
-              depth={0}
-            />
-          ))}
-          {loading && <Loading />}
-        </Box>
-      ) : (
-        <Box
-          display="flex"
-          justifyContent="center"
-          textAlign="center"
-          paddingY={3}
-        >
-          <Box>
-            <Typography variant="h5" color="text.secondary" gutterBottom>
-              No comments yet...
-            </Typography>
-            <Typography variant="body" color="text.secondary">
-              Be the first one to comment!
-            </Typography>
-          </Box>
-        </Box>
-      )}
-    </Stack>
-  ) : (
-    <Loading label="Loading comments" />
-  );
+  return <div></div>;
 };
 
 export default Comments;

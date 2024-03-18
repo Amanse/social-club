@@ -69,19 +69,6 @@ const CommentBrowser = (props) => {
             comments.map((comment) => (
               <Comment key={comment._id} comment={comment} profile />
             ))}
-
-          <Stack py={5} alignItems="center">
-            <Typography variant="h5" color="text.secondary" gutterBottom>
-              {comments.length > 0 ? (
-                <>All comments have been viewed</>
-              ) : (
-                <>No comments available</>
-              )}
-            </Typography>
-            <Button variant="text" size="small" onClick={handleBackToTop}>
-              Back to top
-            </Button>
-          </Stack>
         </>
       )}
     </Stack>

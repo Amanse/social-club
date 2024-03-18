@@ -91,12 +91,12 @@ const Navbar = () => {
             color={theme.palette.primary.main}
           >
             {/* <Link to="/" color="inherit"> */}
-              PostIt
+            SOCIAL CLUB
             {/* </Link> */}
           </Typography>
         </HorizontalStack>
 
-        {!navbarWidth && (
+        {/* {!navbarWidth && (
           <Box component="form" onSubmit={handleSubmit}>
             <TextField
               size="small"
@@ -106,26 +106,16 @@ const Navbar = () => {
               value={search}
             />
           </Box>
-        )}
+        )} */}
 
         <HorizontalStack>
-          {mobile && (
-            <IconButton onClick={handleSearchIcon}>
-              <AiOutlineSearch />
-            </IconButton>
-          )}
+          {mobile && <></>}
 
           <IconButton component={Link} to={"/"}>
             <AiFillHome />
           </IconButton>
           {user ? (
             <>
-              <IconButton component={Link} to={"/messenger"}>
-                <AiFillMessage />
-              </IconButton>
-              <IconButton component={Link}  to={"/users/" + username}>
-                <UserAvatar width={30} height={30} username={user.username} />
-              </IconButton>
               <Button onClick={handleLogout}>Logout</Button>
             </>
           ) : (
@@ -140,7 +130,7 @@ const Navbar = () => {
           )}
         </HorizontalStack>
       </Stack>
-      {navbarWidth && searchIcon && (
+      {/* {navbarWidth && searchIcon && (
         <Box component="form" onSubmit={handleSubmit} mt={2}>
           <TextField
             size="small"
@@ -150,7 +140,7 @@ const Navbar = () => {
             value={search}
           />
         </Box>
-      )}
+      )} */}
     </Stack>
   );
 };
